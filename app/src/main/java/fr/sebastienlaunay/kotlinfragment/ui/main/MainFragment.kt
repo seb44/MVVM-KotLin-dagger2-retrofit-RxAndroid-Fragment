@@ -1,7 +1,9 @@
 package fr.sebastienlaunay.kotlinfragment.ui.main
 
+import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModelProviders
 import android.os.Bundle
+import android.support.design.widget.Snackbar
 import android.support.v4.app.Fragment
 import android.util.Log
 import android.view.LayoutInflater
@@ -12,12 +14,10 @@ import kotlinx.android.synthetic.main.main_fragment.*
 
 class MainFragment : Fragment() {
 
-
     companion object {
 
         private const val ARGUMENT_1 = "ARGUMENT_1"
         private const val ARGUMENT_2 = "ARGUMENT_2"
-
 
         fun newInstance() = MainFragment()
 
@@ -30,26 +30,47 @@ class MainFragment : Fragment() {
     }
 
     private lateinit var viewModel: MainViewModel
+    private var errorSnackbar: Snackbar? = null
 
-    override fun onCreateView( inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         return inflater.inflate(R.layout.main_fragment, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-        Log.d("SEBSEB","onActivityCreated")
+        Log.d("MVVM", "onActivityCreated")
         viewModel = ViewModelProviders.of(this).get(MainViewModel::class.java)
-        // TODO: Use the ViewModel
 
+
+        viewModel.loadingVisibility.observe(this, Observer {
+            it?.let {
+                progressBar.visibility = it
+                Log.d("MVVM", "PROGRESS_BAR = $it")
+            }
+        })
+
+        viewModel.errorMessage.observe(this, Observer { errorMessage ->
+            errorMessage?.let {
+                activity?.let {fragmentActivity ->
+                    errorSnackbar = Snackbar.make(fragmentActivity.findViewById(R.id.progressBar), it, Snackbar.LENGTH_INDEFINITE)
+                    errorSnackbar?.setAction(R.string.retry, viewModel.errorClickListener)
+                    errorSnackbar?.show()
+                }
+            }
+        })
+
+        viewModel.listTanArrets.observe(this, Observer {listeDesArrets ->
+            listeDesArrets?.forEach {
+                Log.d("MVVM","Arret ${it.codeLieu}")
+            }
+        })
 
         arguments?.let {
             it.getString(ARGUMENT_1)?.apply {
                 message.text = this
             }
         }
-
-
     }
 
 }
