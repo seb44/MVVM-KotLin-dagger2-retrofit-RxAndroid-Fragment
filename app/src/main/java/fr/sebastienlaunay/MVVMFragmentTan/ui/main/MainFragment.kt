@@ -1,4 +1,4 @@
-package fr.sebastienlaunay.kotlinfragment.ui.main
+package fr.sebastienlaunay.MVVMFragmentTan.ui.main
 
 import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModelProviders
@@ -9,7 +9,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import fr.sebastienlaunay.kotlinfragment.R
+import fr.sebastienlaunay.MVVMFragmentTan.R
 import kotlinx.android.synthetic.main.main_fragment.*
 
 class MainFragment : Fragment() {

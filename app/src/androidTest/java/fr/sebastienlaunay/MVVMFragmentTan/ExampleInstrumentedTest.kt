@@ -1,4 +1,4 @@
-package fr.sebastienlaunay.kotlinfragment
+package fr.sebastienlaunay.MVVMFragmentTan
 
 import android.support.test.InstrumentationRegistry
 import android.support.test.runner.AndroidJUnit4

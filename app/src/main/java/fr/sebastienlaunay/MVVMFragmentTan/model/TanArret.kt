@@ -1,4 +1,4 @@
-package fr.sebastienlaunay.kotlinfragment.model
+package fr.sebastienlaunay.MVVMFragmentTan.model
 
 data class TanArret (
     var codeLieu: String,

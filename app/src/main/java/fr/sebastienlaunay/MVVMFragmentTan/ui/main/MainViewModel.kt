@@ -1,12 +1,12 @@
-package fr.sebastienlaunay.kotlinfragment.ui.main
+package fr.sebastienlaunay.MVVMFragmentTan.ui.main
 
 import android.arch.lifecycle.MutableLiveData
 import android.util.Log
 import android.view.View
-import fr.sebastienlaunay.kotlinfragment.R
-import fr.sebastienlaunay.kotlinfragment.base.BaseViewModel
-import fr.sebastienlaunay.kotlinfragment.model.TanArret
-import fr.sebastienlaunay.kotlinfragment.network.TanApi
+import fr.sebastienlaunay.MVVMFragmentTan.R
+import fr.sebastienlaunay.MVVMFragmentTan.base.BaseViewModel
+import fr.sebastienlaunay.MVVMFragmentTan.model.TanArret
+import fr.sebastienlaunay.MVVMFragmentTan.network.TanApi
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers

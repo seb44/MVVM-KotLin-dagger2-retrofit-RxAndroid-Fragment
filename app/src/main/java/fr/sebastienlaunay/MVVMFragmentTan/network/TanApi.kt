@@ -1,6 +1,6 @@
-package fr.sebastienlaunay.kotlinfragment.network
+package fr.sebastienlaunay.MVVMFragmentTan.network
 
-import fr.sebastienlaunay.kotlinfragment.model.TanArret
+import fr.sebastienlaunay.MVVMFragmentTan.model.TanArret
 import io.reactivex.Observable
 import io.reactivex.Single
 import retrofit2.http.GET

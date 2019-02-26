@@ -1,8 +1,8 @@
-package fr.sebastienlaunay.kotlinfragment
+package fr.sebastienlaunay.MVVMFragmentTan
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import fr.sebastienlaunay.kotlinfragment.ui.main.MainFragment
+import fr.sebastienlaunay.MVVMFragmentTan.ui.main.MainFragment
 
 class MainActivity : AppCompatActivity() {
 
