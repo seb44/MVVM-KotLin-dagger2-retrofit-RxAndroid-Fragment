@@ -1,8 +1,8 @@
-package fr.sebastienlaunay.kotlinfragment.injection.component
+package fr.sebastienlaunay.MVVMFragmentTan.injection.component
 
 import dagger.Component
-import fr.sebastienlaunay.kotlinfragment.injection.module.NetworkModule
-import fr.sebastienlaunay.kotlinfragment.ui.main.MainViewModel
+import fr.sebastienlaunay.MVVMFragmentTan.injection.module.NetworkModule
+import fr.sebastienlaunay.MVVMFragmentTan.ui.main.MainViewModel
 import javax.inject.Singleton
 
 @Singleton

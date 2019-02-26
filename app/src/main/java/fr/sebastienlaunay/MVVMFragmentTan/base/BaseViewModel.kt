@@ -1,10 +1,10 @@
-package fr.sebastienlaunay.kotlinfragment.base
+package fr.sebastienlaunay.MVVMFragmentTan.base
 
 import android.arch.lifecycle.ViewModel
-import fr.sebastienlaunay.kotlinfragment.injection.component.DaggerViewModelInjector
-import fr.sebastienlaunay.kotlinfragment.injection.component.ViewModelInjector
-import fr.sebastienlaunay.kotlinfragment.injection.module.NetworkModule
-import fr.sebastienlaunay.kotlinfragment.ui.main.MainViewModel
+import fr.sebastienlaunay.MVVMFragmentTan.injection.component.DaggerViewModelInjector
+import fr.sebastienlaunay.MVVMFragmentTan.injection.component.ViewModelInjector
+import fr.sebastienlaunay.MVVMFragmentTan.injection.module.NetworkModule
+import fr.sebastienlaunay.MVVMFragmentTan.ui.main.MainViewModel
 
 abstract class BaseViewModel : ViewModel() {
 

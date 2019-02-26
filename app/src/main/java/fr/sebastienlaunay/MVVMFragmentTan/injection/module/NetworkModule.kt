@@ -1,10 +1,10 @@
-package fr.sebastienlaunay.kotlinfragment.injection.module
+package fr.sebastienlaunay.MVVMFragmentTan.injection.module
 
 import dagger.Module
 import dagger.Provides
 import dagger.Reusable
-import fr.sebastienlaunay.kotlinfragment.BASE_URL
-import fr.sebastienlaunay.kotlinfragment.network.TanApi
+import fr.sebastienlaunay.MVVMFragmentTan.BASE_URL
+import fr.sebastienlaunay.MVVMFragmentTan.network.TanApi
 import io.reactivex.schedulers.Schedulers
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
